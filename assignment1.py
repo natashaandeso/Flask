@@ -4,10 +4,10 @@ from flask import *
 
 
 # Below will create a web server based application
-assignment = Flask(__name__)
+app = Flask(__name__)
 
 
-@assignment.route("/api/calc", methods=["POST"])
+@app.route("/api/calc", methods=["POST"])
 def calculator():
     if request.method == "POST":
         principal = request.form["principal"]
@@ -20,4 +20,4 @@ def calculator():
 
 
 # below will run the application
-assignment.run(debug=True)
+app.run(debug=True)
